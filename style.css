@@ -5,17 +5,106 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Figtree', sans-serif;
+    color: hsl(0, 0%, 7%);
+    border: none;
 }
 
 html{
     font-size: 16px;
+    font-weight: 400;
+    background-color: hsl(47, 88%, 63%);
+    width: 100vw;
 }
 
-body {
-    width: 100vw;
+body{
     max-width: 1440px;
     min-height: 100vh;
-    background-color: hsl(0, 0%, 8%);
+}
+
+/* Card */
+.card_profile{
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.card_profile>*{
+    margin-bottom: 20px;
+    line-height: 1.5rem;
+}
+
+/* image principale */
+.main_image{
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+}
+.main_image img{
+    width: 100%;
+    border-radius: 1rem;
+}
+/* Button */
+button{
+    background-color: hsl(47, 88%, 63%);
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+}
+
+h1, .bottom_profile, button{
+    font-weight: 800;
+}
+/* Mini Profile */
+.bottom_profile{
+    display: flex;
+    max-height: 50px;
+    align-items: center;
+    gap: 1rem;
+}
+.bottom_profile img{
+    width: 10%;
+    height: 10%;
+    object-fit: contain;
+}
+
+/* Attribution */
+.attribution{
+    position: relative;
+    left: 50%;
+    translate: -50%;
+    width: 26ch;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.attribution p,
+.attribution a{
+    color: hsl(0, 0%, 7%)
+}
+.attribution a{
+    color: hsl(0, 0%, 42%);
+    font-weight: 800;
+    text-decoration: none;
 }
 
 
+/* Responsive */
+@media (max-width:765px) {
+    .card_profile{
+        padding: 1.5rem;
+    }
+}
+@media (max-width:535px) {
+    .card_profile{
+        padding: 1rem;
+    }
+    h1{
+        font-size: 28px;
+    }
+}
